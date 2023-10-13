@@ -1,0 +1,202 @@
+:root {
+  --sadPutin-height: 65vh;
+  --sadPutin-width: calc(var(--sadPutin-height) / 1.5);
+  --happyPutin-height: 65vh;
+  --happyPutin-width: calc(var(--happyPutin-height) / 1.5);
+}
+
+body {
+  min-height: 100vh;
+  background: #212534;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+}
+h1 {
+  color: white;
+  font-family: "Titan One", cursive;
+  margin-bottom: 20px;
+}
+.sadPutin {
+  background: url("../images/SadPutin.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: var(--sadPutin-width);
+  height: var(--sadPutin-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 2.5em;
+  color: rgba(198, 7, 7, 0);
+  font-family: "Georgia";
+}
+
+.sadPutin:hover {
+  color: rgb(247, 5, 5);
+  transition: color 1s;
+}
+.sadPutin:hover:before,
+.sadPutin:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+.sadPutin::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
+}
+
+.sadPutin::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--sadPutin-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--sadPutin-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
+}
+
+
+
+
+
+
+
+.happyPutin {
+  background: url("../images/happyPutin.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: var(--happyPutin-width);
+  height: var(--happyPutin-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 2.5em;
+  color: rgba(198, 7, 7, 0);
+  font-family: "Georgia";
+}
+
+.happyPutin:hover {
+  color: rgb(247, 5, 5);
+  transition: color 1s;
+}
+.happyPutin:hover:before,
+.happyPutin:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+.happyPutin::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
+}
+
+.happyPutin::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--happyPutin-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--happyPutin-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
+}
+
+
+
+
+
+
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+a {
+  color: #212534;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.user {
+  color: white;
+  font-size: 24px;
+  font-family: "Georgia", cursive;
+}

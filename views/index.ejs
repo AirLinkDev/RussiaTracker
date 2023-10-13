@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rusian Ruble Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+</head>
+
+<body>
+  <h1>Has the Ruble crashed?</h1>
+  <% console.log("Today received: "+today)%>
+  <% console.log("Yesterday received: "+yesterday)%>
+  <% console.log("putinState received: "+putinState)%>
+  <div class=<%= putinState %>>
+    <p>
+      <%= yesterday %>
+    </p>
+    <p>
+      <%= today %>
+    </p>
+  </div>
+  <p class="user">
+    <%= result %>
+  </p>
+</body>
+
+</html>
